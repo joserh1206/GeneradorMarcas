@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane focusTraversable="true" prefHeight="389.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VentanaSimulador">
+    <children>
+        <TreeTableView fx:id="tvSimulator" layoutX="14.0" layoutY="107.0" prefHeight="265.0" prefWidth="325.0">
+            <columns>
+                <TreeTableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
+                <TreeTableColumn fx:id="tcFecha" prefWidth="75.0" text="Fecha" />
+                <TreeTableColumn fx:id="tcIngreso" prefWidth="87.0" text="Hora Ingreso" />
+                <TreeTableColumn fx:id="tcSalida" prefWidth="87.0" text="Hora Salida" />
+            </columns>
+        </TreeTableView>
+        <Label layoutX="14.0" layoutY="71.0" prefHeight="17.0" prefWidth="45.0" text="Inicio" />
+        <Label layoutX="213.0" layoutY="72.0" text="Final" />
+        <JFXDatePicker fx:id="iniDate" layoutX="47.0" layoutY="67.0" prefHeight="25.0" prefWidth="109.0" />
+        <JFXDatePicker fx:id="endDate" layoutX="241.0" layoutY="68.0" prefHeight="25.0" prefWidth="109.0" />
+        <JFXButton fx:id="btnIniciar" layoutX="346.0" layoutY="352.0" onAction="#iniSimulation" prefHeight="25.0" prefWidth="138.0" text="Iniciar Simulación" />
+        <JFXRadioButton fx:id="rbFinal" layoutX="348.0" layoutY="293.0" selected="true" text="Modo Pruebas">
+            <toggleGroup>
+                <ToggleGroup fx:id="Modo" />
+            </toggleGroup>
+        </JFXRadioButton>
+        <JFXRadioButton fx:id="rbPrueba" layoutX="348.0" layoutY="320.0" text="Modo Final" toggleGroup="$Modo" />
+      <Label layoutX="347.0" layoutY="107.0" text="Ausentismo:" />
+      <Label layoutX="347.0" layoutY="134.0" text="Omisión:" />
+      <Label layoutX="347.0" layoutY="160.0" text="Tardías:" />
+      <JFXProgressBar fx:id="pbSimulation" layoutX="14.0" layoutY="377.0" prefHeight="3.0" prefWidth="325.0" progress="0.0" />
+      <Label fx:id="lblAbsent" layoutX="415.0" layoutY="107.0" prefHeight="17.0" prefWidth="58.0" />
+      <Label fx:id="lblOmision" layoutX="401.0" layoutY="134.0" prefHeight="17.0" prefWidth="58.0" />
+      <Label fx:id="lbltardia" layoutX="393.0" layoutY="160.0" prefHeight="17.0" prefWidth="65.0" />
+    </children>
+</AnchorPane>
