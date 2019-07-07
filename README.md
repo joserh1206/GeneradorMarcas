@@ -40,7 +40,7 @@ Además el servidor puede ofrecer información significativa como:
 ● Listar los tickets atendidos satisfactoriamente por un empleado particular. 
 >>Bajar el servidor
 Al bajar el servidor y salir de la aplicación, deberá quedar en un archivo de Excel la información de cada una de las colas (ROJA, AMARILLA, VERDE) con los tiquetes tramitados al momento y en INBOX. Cada uno de ellos deberá quedar en una pestaña distinta del archivo de Excel donde cada pestaña se llame ROJA, AMARILLA, VERDE, INBOX. El nombre del archivo que se guarda sería TICKETS_Fecha.xls Ejemplo TICKETS_30042015.xls
->La aplicación cliente
+La aplicación cliente
 En el caso de la aplicación cliente, ésta inicia indicando el nombre del usuario que se conecta y cuenta con un selector de color (ROJO, AMARILLO, VERDE) que le permite indicar el tipo de queja que se dispone a atender. Al iniciar la ejecución del cliente cada aplicación cliente debe solicitar el host y el puerto al que se debe conectar para establecer comunicación con la aplicación servidora. Debe crear una clase con la información de conexión y debe asegurar que exista un único servidor.
 El encargado de operar la aplicación cliente tiene como acciones disponibles las siguientes:
 >>1. Conectarse al servidor: Solicita el servicio CONECTAR_EMPLEADO enviado su login y contraseña y si son correctas según el servidor, la aplicación cliente ingresa al modo de sesión de trabajo indicando en pantalla su nombre completo, pudiendo marcar en un selector de color, la categoría actual de trabajo. 
